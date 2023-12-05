@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_architectures/view.dart';
+import 'package:flutter_architectures/counter_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: "Flutter MVC ",
-      home: HomePageView(),
+      title: "Flutter MVVM ",
+      home: CounterView(),
     );
   }
 }
