@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_architectures/view.dart';
+import 'package:flutter_architectures/bloc/counter_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'pages/counter_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    BlocProvider(
+      create: (context) => CounterBloc(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: "Flutter MVC ",
-      home: HomePageView(),
+    return MaterialApp(
+      title: 'Flutter Bloc Example',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: CounterPage(),
     );
   }
 }
