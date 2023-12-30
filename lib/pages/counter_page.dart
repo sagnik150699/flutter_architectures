@@ -1,22 +1,24 @@
+
 import 'package:flutter/material.dart';
+import 'package:flutter_architectures/bloc/counter_bloc.dart';
+import 'package:flutter_architectures/bloc/counter_event.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../bloc/counter_bloc.dart';
-import '../bloc/counter_event.dart';
 import '../bloc/counter_state.dart';
 
 class CounterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Directly use the context provided by the build method
     return Scaffold(
-      appBar: AppBar(title: Text('Counter')),
+      appBar: AppBar(
+        title: const Text('Counter App Bloc'),
+      ),
       body: BlocBuilder<CounterBloc, CounterState>(
         builder: (context, state) {
           return Center(
             child: Text(
-              'Counter Value: ${state.value}',
-              style: TextStyle(fontSize: 24),
+              state.value.toString(),
+              style: const TextStyle(fontSize: 24.0),
             ),
           );
         },
@@ -29,20 +31,23 @@ class CounterPage extends StatelessWidget {
 class MyFloatingActionButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
-      children: <Widget>[
+      children: [
         FloatingActionButton(
-          onPressed: () => BlocProvider.of<CounterBloc>(context).add(Increment()),
+          onPressed: () =>
+              BlocProvider.of<CounterBloc>(context).add(Increment()),
           tooltip: 'Increment',
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
-        SizedBox(width: 10),
+        const SizedBox(
+          width: 10.0,
+        ),
         FloatingActionButton(
-          onPressed: () => BlocProvider.of<CounterBloc>(context).add(Decrement()),
+          onPressed: () =>
+              BlocProvider.of<CounterBloc>(context).add(Decrement()),
           tooltip: 'Decrement',
-          child: Icon(Icons.remove),
+          child: const Icon(Icons.remove),
         ),
       ],
     );
