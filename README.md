@@ -1,6 +1,8 @@
-# flutter_architectures
+# Flutter Architectures
 
-Delve into the world of Flutter architectures with this comprehensive project, exploring MVC, MVVM, and Bloc through practical examples. Gain proficiency in state management and build maintainable Flutter applications.
+Companion repo for  **Udemy** flutter course—learn how MVC, MVVM and Bloc shape clean, testable Flutter apps in minutes.
 
-## Getting Started
+— **Sagnik Bhattacharya**  
+Connect on LinkedIn → <https://www.linkedin.com/in/sagnik-bhattacharya-916b9463/>
+
 

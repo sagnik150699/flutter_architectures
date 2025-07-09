@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Delve into the world of Flutter architectures with this comprehensive project, exploring MVC, MVVM, and Bloc through practical examples. Gain proficiency in state management and build maintainable Flutter applications.",
+    "description": "A Flutter project made by Sagnik Bhattacharya for Udemy Flutter course",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
