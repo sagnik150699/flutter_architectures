@@ -1,4 +1,4 @@
-import 'Model.dart';
+import 'model.dart';
 
 class CounterController {
   final Model _model;

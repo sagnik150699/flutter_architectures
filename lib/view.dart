@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Model.dart';
+import 'model.dart';
 import 'controller.dart';
 
 class HomePageView extends StatefulWidget {
